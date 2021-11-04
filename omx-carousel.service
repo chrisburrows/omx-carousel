@@ -1,0 +1,15 @@
+[Unit]
+Description=OMX Player Carousel Service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=root
+EnvironmentFile=/usr/local/etc/omx-carousel.env
+ExecStart=/usr/local/bin/omx-carousel.py
+
+[Install]
+WantedBy=multi-user.target
