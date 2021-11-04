@@ -9,7 +9,7 @@ Restart=always
 RestartSec=5
 User=root
 EnvironmentFile=/usr/local/etc/omx-carousel.env
-ExecStart=/usr/local/bin/omx-carousel.py
+ExecStart=/usr/local/bin/omx-carousel.py --playlist ${PLAYLIST}
 
 [Install]
 WantedBy=multi-user.target
